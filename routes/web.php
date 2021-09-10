@@ -24,4 +24,5 @@ Route::get('/contact/messages', 'ContactController@getMessages')->name('get-mess
 Route::post('contact/submit', 'ContactController@submit')->name('contact-form-submit');
 
 Route::resource('/todo', 'TodosController@index');
+Route::resource('/todo/create', 'TodosController@create');
 Route::resource('todo', 'TodosController');
