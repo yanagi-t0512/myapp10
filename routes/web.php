@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/welcome', 'HomeController@index')->name('welcome');
+Route::get('/', 'HomeController@index')->name('welcome');
 
-Route::get('/', 'PagesController@getHome')->name('home');
+Route::get('/home', 'PagesController@getHome')->name('home');
 
 Route::get('/contact', 'PagesController@getContact')->name('contact');
 
@@ -24,5 +24,10 @@ Route::get('/contact/messages', 'ContactController@getMessages')->name('get-mess
 Route::post('contact/submit', 'ContactController@submit')->name('contact-form-submit');
 
 Route::resource('/todo', 'TodosController@index');
-Route::resource('/todo/create', 'TodosController@create');
+// Route::resource('/todo/create', 'TodosController@create');
 Route::resource('todo', 'TodosController');
+
+Auth::routes();
+Route::get('/listings/top', 'ListingsController@top')->name('listings-top');
+Route::resource('listings', 'ListingsController');
+Route::get('/listings', 'ListingsController@index');

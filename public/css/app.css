@@ -10942,6 +10942,11 @@ a.text-dark:focus {
   }
 }
 
+html,
+body {
+  height: 100%;
+}
+
 #footer {
   margin-top: 30px;
   padding: 20px;
