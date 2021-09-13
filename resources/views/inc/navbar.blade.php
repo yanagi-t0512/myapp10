@@ -57,8 +57,22 @@
                     <a class="nav-link " href="/listings/top">Listings（会員用）</a>
                 </li>
             @endguest
-
+            <li class="nav-item dropdown">
+                <a id="dropdown02" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    アルバム
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdown02">
+                    <a class="dropdown-item" href="/albums">
+                        アルバム一覧
+                    </a>
+                    <a class="dropdown-item" href="/albums/create">
+                        アルバム作成
+                    </a>
+                </div>
+            </li>
         </ul>
+
         <ul class="navbar-nav ml-auto float-right">
             <!-- Authentication Links -->
             @guest

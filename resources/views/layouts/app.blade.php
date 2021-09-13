@@ -23,7 +23,7 @@
 <body>
   @include('inc.navbar')
 
-  <div class="container h-75">
+  <div class="container">
     @if (Request::is('/'))
       @include('inc.showcase')
     @endif
